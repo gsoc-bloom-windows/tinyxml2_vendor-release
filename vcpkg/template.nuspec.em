@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>ros-dashing-tinyxml2-vendor</id>
-    <version>0.6.1</version>
-    <title>ros-dashing-tinyxml2-vendor</title>
-    <authors>William Woodall <william@osrfoundation.org></authors>
+    <id>@(Package)</id>
+    <version>@(Version)</version>
+    <title>@(Package)</title>
+    <authors>@(Authors)</authors>
     <owners>OSRF</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Wrapper around tinyxml2, providing nothing but a dependency on tinyxml2, on some systems.
- On others, it provides a fixed CMake module or even an ExternalProject build of tinyxml2.</description>
-<dependencies>
-      <dependency id="ros-dashing-ros-workspace"/>
+    <description>@(Description)</description>
+    <dependencies>
+@[for d in Depends]@(d)@[end for]
     </dependencies>
   </metadata>
   <files>
